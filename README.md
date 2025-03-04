@@ -1,6 +1,6 @@
 # Spotify Data Retrieval
 
-This project provides a set of Node.js scripts to interact with the Spotify API. The scripts allow you to retrieve your liked songs, playlists, and tracks within a playlist. The data can be displayed in the browser or saved to JSON files for further analysis.  Note this tool does NOT retrieval actual audio files, just your playlist data.
+This project provides a set of Node.js scripts to interact with the Spotify API. The scripts allow you to retrieve your liked songs, playlists, and tracks within a playlist. The data can be displayed in the browser or saved to JSON files for further analysis.  Note this tool does NOT retrieve actual audio files, just playlist data.
 
 ## Why It's Useful
 
