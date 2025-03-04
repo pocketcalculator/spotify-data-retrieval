@@ -33,9 +33,9 @@ SPOTIFY_CLIENT_ID=your_client_id
 SPOTIFY_CLIENT_SECRET=your_client_secret
 ```
 
-### 4. Create Data Directory
+### 4. Create Data Directory (Optional)
 
-Make sure to create the `data` directory in your project root:
+Create the `data` directory in your project root:
 
 ```sh
 mkdir data
