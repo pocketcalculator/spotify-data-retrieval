@@ -61,7 +61,7 @@ Retrieve and display all your playlists. Optionally save the playlists to a JSON
 node getPlaylists.js [--save]
 ```
 
-Open the URL `http://localhost:8888/login` in your browser to authenticate with Spotify. After authentication, the playlists will be displayed in the browser. If the `--save` option is provided, the playlists will be saved to a JSON file in the `data` directory.
+Open the URL `http://localhost:8888/login` in your browser to authenticate with Spotify. After authentication, the playlists and their IDs will be displayed in the browser. If the `--save` option is provided, the playlists and playlist IDs will be saved to a JSON file in the `data` directory.
 
 #### Get Playlist Tracks (getPlaylistTracks.js)
 
