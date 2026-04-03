@@ -28,6 +28,12 @@ app.get('/callback', async (req, res) => {
     try {
         const code = req.query.code || null;
         const playlistId = req.query.state || null;
+
+        if (!playlistId || !isValidPlaylistId(playlistId)) {
+            console.error('Invalid playlist ID received in callback state parameter.');
+            return res.status(400).send('Invalid playlist ID.');
+        }
+
         const response = await axios.post('https://accounts.spotify.com/api/token', null, {
             params: {
                 grant_type: 'authorization_code',
@@ -62,6 +68,11 @@ app.get('/callback', async (req, res) => {
         res.status(500).send('Internal Server Error');
     }
 });
+
+function isValidPlaylistId(playlistId) {
+    // Spotify playlist IDs are typically 22-character base62 strings.
+    return typeof playlistId === 'string' && /^[A-Za-z0-9]{22}$/.test(playlistId);
+}
 
 async function getAllPlaylistTracks(accessToken, playlistId) {
     let allTracks = [];
